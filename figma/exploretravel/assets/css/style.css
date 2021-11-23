@@ -1,0 +1,106 @@
+.header {
+    padding-top: 45px;
+    padding-bottom: 70px;
+}
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn--primary {
+    color:#fff;
+    background-color: var(--primary-color);
+}
+.btn--secondary {
+    color:var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:0 35px;
+}
+.menu .menu-link {
+    text-decoration: none;
+    color:inherit;
+}
+
+.hero {
+    margin-bottom: 270px;
+
+}
+.hero-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 470px;
+}
+
+.hero-heading {
+    font-size:64px;
+    line-height:125%;
+    margin-bottom:74px;
+}
+
+.hero-caption {
+    font-size:22px;
+    font-weight:600px;
+    margin-bottom: 48px;
+    padding-bottom: 20px;
+    display:inline-block;
+    position: relative;
+}
+
+.hero-caption::before {
+    content :'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:32px;
+    height:2px;
+    background-color:var(--gray-darkest-color);
+}
+
+.hero-form {
+    width: 100%;
+    margin-bottom: 50px;
+    display:grid;
+    /* Tạo 2 cột  */
+    grid-template-columns: 1fr 1fr;
+    /* // khoảng cách các cột 30px */
+    grid-gap: 30px;
+}
+.dropdown {
+    width:100%;
+}
+
+.dropdown-list {
+    display:none;
+}
+
+.dropdown-select {
+    padding: 20px 30px;
+    border-radius: 6px;
+    border:1px solid var(--gray-dark-color);
+    color:var(--gray-darkest-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-image {
+    width:600px;
+    transform: translateX(85px);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}

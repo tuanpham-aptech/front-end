@@ -1,0 +1,10 @@
+esp = 0.01
+pi4=0
+i=0
+dau=1
+while (1/(2*i+1) >= esp):
+    pi4=pi4+dau*1/(2*i+1)
+    dau=-dau
+    i=i+1
+pi=4*pi4
+print("Pi = ", pi, " voi sai so: ", round(1/(2*i+1) ,8))

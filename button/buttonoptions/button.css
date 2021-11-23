@@ -1,0 +1,178 @@
+.box {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    max-width: 800px;
+    margin: 0 auto;
+ }
+ .box > .button {
+    flex-basis:150px;
+    margin-bottom: 1em;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.5em 1em;
+    color:black;
+    outline:none;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    position: relative;
+    cursor:pointer;
+    overflow:hidden;
+    transition: all .5s;
+ }
+ 
+ .button::before,
+ .button::after {
+    content: '';
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    height: 100%;
+    background: #0b42a5;
+    z-index: -1;
+    transform: translate3D(0,-101%,0);
+    transition: all .5s;
+ }
+ .button::before {
+    background: #bad2ff;
+    z-index: -2;
+    transform: translate3D(0,0,0);
+ }
+ .button:hover {
+    color:white;
+ }
+ .button:hover::after {
+    transform: translate3D(0,0,0);
+ }
+ /* Slide Left */
+ 
+ .slideleft::after {
+    top:0;
+    z-index:-1;
+    transform: translate3D(-101%,0,0);
+ }
+ .slideleft:hover:after {
+    transform: translate3D(0,0,0);
+ }
+ 
+ /* Slide Corner */
+ 
+ .slidecorner::after {
+    transform: translate3D(-100%,100%,0);
+ }
+ .slidecorner:hover:after {
+    transform: translate3D(0,0,0);
+ }
+ 
+ /* Angle In */
+ 
+ .slideangle::after {
+    width: 130%;
+    transform-origin: 0 bottom;
+    transform: translate3D(-50%,0,0) rotate(-50deg);
+ }
+ .slideangle:hover:after {
+    transform: rotate(0deg);
+ }
+ 
+ /* Bounce */
+ 
+ .bouncein:hover::before,
+ .bouncein:hover::after {
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+ }
+ 
+ /* Curtain Down */
+ 
+ .curtain {
+    border: 1px solid #eee;
+ }
+ .curtain::before,
+ .curtain::after {
+    background: #0b42a5;
+    transform: translate3D(0, -101%, 0);
+ }
+ .curtain::after {
+     transform: translate3D(0, 101%, 0);
+ }
+ .curtain:hover::before,
+ .curtain:hover::after {
+    transform: translate3D(0, -50%, 0);
+    translition: all .5s;
+ }
+ .curtain:hover::after  {
+    transform: translate3D(0, 50%, 0);
+ }
+ 
+ /* Curtain Up */
+ 
+ .curtainup {
+    transform-style: preserve-3d;
+ }
+ .curtainup::before,
+ .curtainup::after {
+    transform-origin: center center;
+    transform: scale(1,0);
+ }
+ .curtainup:hover::before,
+ .curtainup:hover::after {
+    transform: scale(1);
+ }
+ 
+ /* Curtain Angle */
+ 
+ .curtainangle {
+    border: 1px solid #eee;
+ }
+ .curtainangle::before {
+    top:0;
+    left:0;
+    width: 150%;
+    background: #0b42a5;
+    transform-origin: 0 bottom;
+    transform: translateX(-100%) rotate(-30deg);
+ }
+ .curtainangle::after {
+    top:0;
+    left:auto;
+    right: 0;
+    width: 150%;
+    transform-origin: right bottom;
+    transform: translateX(100%) rotate(30deg);
+ }
+ .curtainangle:hover::before {
+    left:0;
+    transform: rotate(0deg);
+    transition: all .5s;
+ }
+ .curtainangle:hover::after {
+    right:0;
+    transform: rotate(0deg);
+    transition: all .5s;
+ }
+ 
+ /* Double Take */
+ 
+ .doubletake::before,
+ .doubletake::after {
+    width: 200%;
+    background: #0b42a5;
+    transform-origin: 0 bottom;
+    transform: translate3D(-50%,0,0) rotate(-50deg);
+ }
+ .doubletake::before {
+    opacity:.4;
+ }
+ .doubletake:hover::before,
+ .doubletake:hover::after {
+    transform: rotate(0deg);
+    transition: all .25s;
+ }
+ .doubletake:hover:after {
+    transition-delay: .25s;
+ }

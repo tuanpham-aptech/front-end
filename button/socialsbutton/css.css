@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+.socials-button{
+margin: auto;
+background-color:red;
+}
+.socials-button a{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 3px;
+    border-radius: 50%;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+.socials-button a span{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color:#ffff;
+    background-color: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    -webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+
+}
+.socials-button a span:last-child{
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    background-color: rgba(0,0,0,0.3);
+}
+.socials-button a:hover span:first-child{
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.socials-button a:hover span:last-child{
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+}

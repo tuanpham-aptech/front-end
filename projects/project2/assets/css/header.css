@@ -1,0 +1,149 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+:root {
+    --font-size:0.8rem;
+    --primary-color:#b94b07;
+    --text-color:#515151;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #515151;
+    font-weight: 400;
+}
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__top {
+    background-color:#f4edd9;
+    height: 100%;
+}
+
+.logo {
+    width:100px;
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    display: block;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.logo a img {
+    max-height: 100px;
+    padding:5px 0;
+}
+
+.slogan {
+    display:flex;
+    align-items: center;
+   list-style: none;
+}
+
+.slogan .slogan__item {
+    display:inline-block;
+    padding: 0;
+    margin: 0 7px;
+}
+
+.slogan-divider {
+    border-left: 1px solid rgba(0,0,0,0.1);
+    height: 30px;
+    vertical-align: middle;
+    position: relative;
+    margin: 0 7.5px;
+}
+
+a.phone {
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.phone i {
+    display:inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    font-size:2.2em;
+    color:#c90303;
+}
+
+.phone .phone-desc {
+    width: 100%;
+    margin-left: 4px;
+}
+
+.phone-desc span {
+    color:var(--text-color);
+    font-size:13px;
+    text-transform: uppercase;
+}
+
+.phone-desc h3 {
+    color:#c90303;
+    font-size:1.6rem;
+    letter-spacing:-1px
+}
+
+.navbar {
+    width: 100%;
+    min-height: 38px;
+    background-color:var(--primary-color);
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item {
+    display:inline-block;
+    list-style: none;
+    margin: 0 13px;
+}
+
+.navbar__item:first-child {
+    margin-left: 0;
+}
+
+.navbar__link {
+    display:inline-flex;
+    align-items: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    line-height: 18px;
+    margin-left: 0 18px;
+    padding:10px 0;
+    text-decoration: none;
+}
+
+.navbar__link i {
+    margin-left: 4px;
+}
