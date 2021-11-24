@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 15px 60px;
+    color:orange;
+    border: 2px solid orange;
+    text-decoration: none;
+    margin: auto;
+    font-size: 20px;
+    transition: color .5s ease;
+
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+    width: 0px;
+    transition: all .8s ease;
+    z-index: -1;
+
+}
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+.btn:hover{
+    color:#000;
+}

@@ -1,0 +1,4 @@
+A, lấy ra chiều dài len
+B, cắt từng từ đến s.split()
+C, lấy ra nhiều từ s1 = s[0:4]
+D, tìm vị trí của từ  s1= s.find(‘pham tuan’)
